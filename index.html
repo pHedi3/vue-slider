@@ -16,13 +16,15 @@
         <div id="app">
             <div class="container">
                 <div class="row align-items-center text-center">
-                    <div class="arrow-left col-2">
+                    <div  @click="befor"
+                     class="arrow-left col-2">
                         <i class="far fa-arrow-alt-circle-left"></i>
                     </div>
                     <div class="img-slider col-8">
-                        <img :src="img[0]" alt="">
+                        <img :src="img[imgCunter]" alt="">
                     </div>
-                    <div class="arrow-left col-2">
+                    <div  @click="next"
+                     class="arrow-left col-2">
                         <i class="far fa-arrow-alt-circle-right"></i>
                     </div>
 
