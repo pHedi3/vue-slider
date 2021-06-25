@@ -30,13 +30,16 @@ new Vue(
                 if( index === this.imgCunter) {
                     return 'pointer' + index
                 }
+            },
+            goTo: function(index) {
+                this.imgCunter = index
             }
 
         },
         created() {
             setInterval(() => {
                 this.next()
-            }, 2000)
+            }, 3000)
         }
 
     }

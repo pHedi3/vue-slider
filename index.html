@@ -25,6 +25,7 @@
                         <div class="littel-slide">
                             <i v-for="(img, index) in img"
                             :class="pointer(index)"
+                            @click="goTo(index)"
                              class="fas fa-square-full"></i>
                         </div>
                     </div>
