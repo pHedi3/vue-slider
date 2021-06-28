@@ -14,26 +14,29 @@
     <body>
         
         <div id="app">
-            <div class="container-fluid">
-                <div class="row align-items-center text-center">
-                    <div  @click="befor"
-                     class="arrow-left col-2">
-                        <i class="far fa-arrow-alt-circle-left"></i>
-                    </div>
-                    <div class="img-slider col-8">
+            <div class="container">
+                <div class="row">
+                    <div class="img-slider col-12">
                         <img :src="img[imgCunter]" alt="">
-                        <div class="littel-slide">
+                        <div class=" arrow-conteiner">
+                            <div class="row justify-content-between">
+                                <div  @click="befor"
+                                    class="arrow-pos-left col-1">
+                                   <i class="far fa-arrow-alt-circle-left"></i>
+                               </div>
+                               <div  @click="next"
+                                    class="arrow-pos-right col-1">
+                                  <i class="far fa-arrow-alt-circle-right"></i>
+                              </div>
+                            </div>
+                        </div>
+                        <div class="littel-slide col-4 col-offset-6">
                             <i v-for="(img, index) in img"
                             :class="pointer(index)"
                             @click="goTo(index)"
                              class="fas fa-square-full"></i>
                         </div>
                     </div>
-                    <div  @click="next"
-                     class="arrow-left col-2">
-                        <i class="far fa-arrow-alt-circle-right"></i>
-                    </div>
-
                 </div>
 
             </div>
